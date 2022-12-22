@@ -1,0 +1,33 @@
+<!-- " Write conditional statement to find and print the grade of student.
+     a. Distinction( >= 80)
+     b. First division (>=60 & < 80)
+     c. Second division (>=50 & <60)
+     d. Third division (>=40 & <50)
+     e. Fail (< 40) -->
+
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Conditionals</title>
+     </head>
+     <body>
+         <script>
+             let mark = Number(prompt("What's  your mark?"));
+             if (mark >= 80) {
+                 alert("You got Distinction.");
+             } else if (mark >= 60) {
+                 alert("You got first division.");
+             } else if (mark >= 50) {
+                 alert("You got second division.");
+             } else if (mark >= 40 ) {
+                 alert("You got third division.");
+             } else {
+                 alert("Sorry.You failed but don't lose your hope!!.");
+             }
+         </script>
+     </body>
+     </html>
+     
