@@ -5,11 +5,11 @@ const background = [
   "linear-gradient(transparent, white)",
 ];
 
-const amount = 50; // amount of raindops
-let i = 0;
+const raindropAmount = 50; // amount of raindrops
+let intialRainState = 0;
 
 // Looping and creating the raindrop then adding to the rainContainer
-while (i < amount) {
+while (intialRainState < raindropAmount) {
   //  Creating an Element
   const drop = document.createElement("i");
 
@@ -31,5 +31,5 @@ while (i < amount) {
 
   //   Appending the raindrop in the raindrop container
   rainContainer.appendChild(drop);
-  i++;
+  intialRainState++;
 }
