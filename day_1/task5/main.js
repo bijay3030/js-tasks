@@ -17,7 +17,7 @@ function distributeDiamonds(diamonds, numPeople) {
             if (differenceOfEachElement == 0) {
                 distribute.push([diamonds[i]])
             } else if (prevDiamondData.includes(differenceOfEachElement)) {
-                distribute.push([diff, diamonds[i]])
+                distribute.push([differenceOfEachElement, diamonds[i]])
                 delete prevDiamondData[prevDiamondData.indexOf(differenceOfEachElement)]
             } else {
                 prevDiamondData.push(diamonds[i])
