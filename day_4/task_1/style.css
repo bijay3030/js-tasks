@@ -1,32 +1,16 @@
 body{
-    background-image: url("./images/background3.jpg");
-}
-.button-container{
-    display: flex ;
-
-}
-
-.container{
-    width: 40%;
-    margin-left: auto;
-    margin-right:14%;
-    margin-top: 5%;
+    background-image: url("./images/background_image3.avif");
+    background-size: cover;
+    text-align: center;
+    margin-top: 20%;
 }
 
 button {
     padding: 15px;
-    margin: 5px 15px 5px 1px;
-}
-
-.user-field{
-    border: 1px solid black;
-    width: 31%;
-    padding: 15px 10px 15px 10px;
-    background-color: olive;
+    margin: 5px 5px;
 }
 
 #result{
-    height: 50px;
-    text-align: center;
-
+    padding: 23px 35px;
+    margin-bottom: 10px;
 }
