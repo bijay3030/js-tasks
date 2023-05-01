@@ -1,0 +1,16 @@
+body{
+    background-image: url("./images/background_image3.avif");
+    background-size: cover;
+    text-align: center;
+    margin-top: 20%;
+}
+
+button {
+    padding: 15px;
+    margin: 5px 5px;
+}
+
+#result{
+    padding: 23px 35px;
+    margin-bottom: 10px;
+}
