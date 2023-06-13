@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>Multiple Ball Collision Example</title>
+	<style>
+  	canvas {
+    	border: 1px solid black;
+  	}
+	</style>
+  </head>
+  <body>
+	<canvas id="myCanvas" ></canvas>
+	<script>
+  	const canvas = document.getElementById('myCanvas');
+  	const canvasContext = canvas.getContext('2d');
+
+  	class Ball {
+    	constructor(x, y, radius, dx, dy, color) {
+      	this.x = x;
+      	this.y = y;
+      	this.radius = radius;
+      	this.dx = dx;
+      	this.dy = dy;
+      	this.color = color;
+    	}
+  	}
+
+  	const balls = [
+    	new Ball(canvas.width/2, canvas.height/2, 20, 2, -2, 'red'),
+    	new Ball(canvas.width/4, canvas.height/4, 15, -1, 1, 'green'),
+    	new Ball(canvas.width*3/4, canvas.height*3/4, 25, 1.5, -1.5, 'blue')
+  	];
+
+  	function drawBall(ball) {
+    	canvasContext.beginPath();
+    	canvasContext.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2);
+    	canvasContext.fillStyle = ball.color;
+    	canvasContext.fill();
+  	}
+
+  	function moveBalls() {
+    	canvasContext.clearRect(0, 0, canvas.width, canvas.height);
+
+    	for(let ball of balls) {
+      	drawBall(ball);
+
+      	if(ball.x + ball.dx > canvas.width - ball.radius || ball.x + ball.dx < ball.radius) {
+        	ball.dx = -ball.dx;
+      	}
+
+      	if(ball.y + ball.dy > canvas.height - ball.radius || ball.y + ball.dy < ball.radius) {
+        	ball.dy = -ball.dy;
+      	}
+
+      	ball.x += ball.dx;
+      	ball.y += ball.dy;
+    	}
+  	}
+
+  	setInterval(moveBalls, 10);
+	</script>
+  </body>
+</html>
